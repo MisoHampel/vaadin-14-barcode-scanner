@@ -56,9 +56,16 @@ public class BarcodeScanner extends Component{
     }
 
 
+    /**
+     * Initialize and start decoding barcode<br>
+     */
     public void initAndStart(){
         getElement().executeJs("window.BarcodeReaderInitialize($0,$1,$2,$3,$4);",getElement(),readers,locate,frequency,debug);
     }
+
+    /**
+     * Stop decoding barcodes - QuaggaJS.stop()
+     */
     public void stop(){
         getElement().executeJs("window.BarcodeReaderStop();");
     }

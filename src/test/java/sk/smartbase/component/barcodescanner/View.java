@@ -17,7 +17,6 @@ public class View extends Div {
         });
         add(barcodeScanner);
         add(lastScannedLabel);
-        barcodeScanner.setReaders(DecoderEnum.CODE_39_READER);
 
         barcodeScanner.setStopAfterScan(false);
         add(new Button("stop",e->{
